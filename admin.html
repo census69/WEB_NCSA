@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <title>Admin Panel</title>
+  <link rel="stylesheet" href="../view/style.css">
+</head>
+
+<body>
+
+  <header>
+    <h2>Admin Panel</h2>
+
+    <div class="header-actions">
+      <button onclick="loadUsers()">Refresh</button>
+      <button onclick="logout()">Logout</button>
+    </div>
+  </header>
+
+  <div class="container">
+    <div class="card" style="padding:20px;">
+      <button onclick="window.location.href='userpanel.html'">เข้าสู่ระบบจัดการสมาชิก</button>
+
+      <ul id="user-list" style="list-style:none; padding:0;"></ul>
+    </div>
+  </div>
+
+  <script src="admin.js"></script>
+
+  <script>
+    function logout() {
+      localStorage.clear();
+      window.location.href = "Login.html";
+    }
+  </script>
+
+</body>
+</html>

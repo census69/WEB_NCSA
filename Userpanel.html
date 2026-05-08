@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <title>User Management for Admin</title>
+  <link rel="stylesheet" href="../view/style.css">
+  <style>
+    .user-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+    .user-table th, .user-table td {
+      padding: 15px;
+      text-align: left;
+      border-bottom: 1px solid #eee;
+    }
+    .user-table th {
+      background-color: #f8f9fa;
+      color: #2c3e50;
+    }
+    .status-paid { color: #27ae60; font-weight: bold; }
+    .status-pending { color: #e74c3c; font-weight: bold; }
+    .action-btn { 
+      padding: 10px 15px !important; 
+      width: auto !important; 
+      font-size: 14px !important;
+      margin-right: 5px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h2>User Management</h2>
+    <div class="header-actions">
+      <button onclick="window.location.href='admin.html'" style="background: #34495e;">Back</button>
+      <button onclick="loadUserData()">Refresh Data</button>
+    </div>
+  </header>
+
+<div class="card">
+    <h3>รายการลูกค้า</h3>
+    
+    <div id="user-table-container"></div>
+</div>
+
+  <script src="../control/userpanel.js"></script>
+</body>
+</html>

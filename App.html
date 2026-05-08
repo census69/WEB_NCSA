@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>camping gear</title>
+  <link rel="stylesheet" href="../view/style.css">
+</head>
+
+<body>
+
+  <header>
+    <h2>Molybdenum shop</h2>
+    <div class="header-actions">
+      <div class="cart">🧺 <span id="cart-count">0</span></div>
+      <button class="login-btn" onclick="goToLogin()">Login</button>
+    </div>
+  </header>
+
+  <div class="category-menu">
+    <button onclick="renderProducts('all')">All</button>
+    <button onclick="renderProducts('Tent')">Tent</button>
+    <button onclick="renderProducts('Sleeping Bag')">Sleeping Bag</button>
+    <button onclick="renderProducts('Chair')">Chair</button>
+  </div>
+
+  <div class="container" id="product-list"></div>
+
+  <script src="../control/app.js"></script>
+</body>
+
+</html>
